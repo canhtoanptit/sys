@@ -1,4 +1,5 @@
 import {Button} from "../components/Button";
+import Router from "next/router";
 
 function HiThere() {
   return (
@@ -6,10 +7,19 @@ function HiThere() {
   )
 }
 
+function ReadMore() {
+  return (
+    <div>
+      Click <span onClick={() => Router.push('/blog')}>here</span> to read more!
+    </div>
+  )
+}
+
 const About = () => (
   <div>
     <Button/>
     <HiThere />
+    <ReadMore />
   </div>
 );
 
